@@ -6,7 +6,7 @@ const adminschema = require('./Allschemas')
 const prdidSchema = require('./Allschemas')
 
 
-mongoose.connect('mongodb+srv://Abhishek:abhi0023@cluster0.nxevonu.mongodb.net/E-commerce')
+
 
 const usermodel = new mongoose.model('users',userschema);
 

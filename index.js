@@ -344,7 +344,7 @@ app.post("/getusers", async (req, res) => {
         } else {
           console.log("all users no send");
           console.log("f1");
-          res.send(false);
+          res.send(false); 
         }
       });
     }
@@ -617,11 +617,12 @@ app.post("/cancelorderandcartitem", (req, res) => {
                   const orderarr = [];
                   let tmp;
                   for (i = 0; i < result.orders.length; i++) {
-                    if (result.orders[i] != pid) {
+                    if (result.orders[i] == pid) {
                       // orderarr.push(result.orders[i]);
                       tmp = i;
                     }
                   }
+                  console.log(tmp)
                   for (i = 0; i < result.orders.length; i++) {
                     if (i != tmp) {
                       orderarr.push(result.orders[i]);
